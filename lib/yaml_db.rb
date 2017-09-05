@@ -1,7 +1,7 @@
 class ListHook < ActiveRecord::Base 
  require 'yaml'
 
- path = "plugins/redmine_hook/db/list_hooks.yml"
+ path = "plugins/redmine_hook/db/list_hook.yml"
  
  data = YAML.load_file(path)
  element = {}
@@ -11,10 +11,10 @@ class ListHook < ActiveRecord::Base
     data.each_value do |str_l|     
       str_l = str_l.split(" ")      
       str_l.each do |s|
-        if ListHooks.where("name" => s).first
-           #puts "find " + s   
+        if ListHook.where("name" => s).first
+             
         else                
-          l = ListHooks.new
+          l = ListHook.new
           l.name = s
           l.save
           puts "create " + s   
