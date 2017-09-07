@@ -1,1 +1,12 @@
 <h2><%=l("Settings_plugin")%></h2>
+
+<p><%= link_to l(:label_text_hook_index),
+              		{:controller => 'text_hook',
+              		:action => 'index'},
+              		:class => 'icon icon-list' %>
+</p>
+<p>	<%= link_to l(:label_list_hook_index),
+              		{:controller => 'list_hook',
+              		:action => 'index'},
+              		:class => 'icon icon-list' %>
+</p>

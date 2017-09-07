@@ -1,2 +1,2 @@
 # Plugin's routes
-# See: http://guides.rubyonrails.org/routing.html
+resources :list_hook, :text_hook, :seting_text

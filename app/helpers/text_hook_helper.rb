@@ -1,0 +1,2 @@
+module TextHookHelper
+end

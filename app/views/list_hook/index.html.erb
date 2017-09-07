@@ -1,0 +1,53 @@
+<div class="content_for">
+<h2>list hook</h2>
+
+<div style="padding: 10px;">
+			
+	<div class="contextual">
+  		<%= link_to l(:label_list_hook_new),
+              		{:action => 'new'},
+              		:class => 'icon icon-add' %>
+	</div>
+
+<table class="plugin_settings" style="width: 100%;">
+
+<thead>
+  <tr>
+     <th align="left"><%=l(:id)%></th>
+    <th align="left"><%= l(:name) %></th>   
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  	
+  <% @list.each do |l| %>
+      <tr class="<%= cycle('odd', 'even') %>">
+        <td class="corr-content"><%= simple_format h(l.id) %></td>
+        <td class="corr-title"><%= link_to h(l.name),{ :action => :edit, :id => l.id } %></td>
+        
+
+        <td class="buttons">
+          <%= link_to l(:button_edit),
+                      {
+                          
+                          :action => 'edit',
+                          :id => l.id
+                      },
+                      :class => 'icon icon-edit' %>
+          <%= link_to l(:button_delete),
+                      {
+                          
+                          :action => 'destroy',
+                          :id => l.id
+                      },
+                      :method => :delete,
+                      :confirm => l(:text_are_you_sure),
+                      :class => 'icon icon-del' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+     	
+</table>
+</div>
+</div>
