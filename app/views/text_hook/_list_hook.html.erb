@@ -5,7 +5,7 @@
 	<legend><%=l(:label_list_hook_index)%></legend>
 	<% ListHook.all.each do |s| %>
     	<label class="floating">
-    	<%= check_box_tag 'ListHook_id[]', s.id, SetingText.where("text_hook_id" => 1).pluck("list_hook_id").include?(s.id)   	,:id => nil %>
+    	<%= check_box_tag 'listhook_id[]', s.id, SetingText.where("text_hook_id" => @txt.id).pluck("list_hook_id").include?(s.id)   	,:id => "listhook_id#{s.id}" %>
     	<%= s.name %>
 		 </label>
 	<% end %>

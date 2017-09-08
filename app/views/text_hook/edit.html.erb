@@ -2,9 +2,9 @@
 <%= error_messages_for @txt %>
 
 <div class="box tabular">
-	<%= labelled_form_for @txt, url: {action: "edit"} do |f| %>
+	<%= labelled_form_for @txt, url: {action: "update"} do |f| %>
 		 <%= render :partial => 'form', :locals => {:f => f} %>
-		 <%= submit_tag l(:button_edit) -%>
+		 <%= submit_tag l(:button_save) -%>
 		 <%= link_to l(:button_cancel), {:controller => 'text_hook', :action => 'index'}%>
 	<% end %>
 </div>
