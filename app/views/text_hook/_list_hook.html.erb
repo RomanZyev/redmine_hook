@@ -1,0 +1,15 @@
+<div class="content_for">
+  
+<fieldset class="box tabular" id="text_hook">
+
+	<legend><%=l(:label_list_hook_index)%></legend>
+	<% ListHook.all.each do |s| %>
+    	<label class="floating">
+    	<%= check_box_tag 'ListHook_id[]', s.id, SetingText.where("text_hook_id" => 1).pluck("list_hook_id").include?(s.id)   	,:id => nil %>
+    	<%= s.name %>
+		 </label>
+	<% end %>
+</fieldset>
+
+
+</div>

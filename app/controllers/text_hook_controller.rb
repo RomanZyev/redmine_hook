@@ -39,6 +39,12 @@ class TextHookController < ApplicationController
     	redirect_to action: :index
     end
 
+    def update_text
+    	update_main
+
+    	redirect_to action: :index	
+   	end	
+   	
   private
   
   def text_params
