@@ -10,3 +10,6 @@ Redmine::Plugin.register :redmine_hook do
 
   settings :default => {'empty' => true}, :partial => 'settings'
 end
+
+# Hooks
+require_dependency 'patches/hooks/view_hook'
