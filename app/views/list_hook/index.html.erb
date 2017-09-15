@@ -1,6 +1,9 @@
 <div class="content_for">
 <h2>list hook</h2>
 
+<%= link_to l(:Settings_plugin), "/settings/plugin/redmine_hook" %>
+
+
 <div style="padding: 10px;">
 			
 	<div class="contextual">
@@ -20,7 +23,7 @@
   </thead>
   <tbody>
   	
-  <% @list.each do |l| %>
+  <% @hooks.each do |l| %>
       <tr class="<%= cycle('odd', 'even') %>">
         <td class="corr-content"><%= simple_format h(l.id) %></td>
         <td class="corr-title"><%= link_to h(l.name),{ :action => :edit, :id => l.id } %></td>
@@ -28,15 +31,13 @@
 
         <td class="buttons">
           <%= link_to l(:button_edit),
-                      {
-                          
+                      {   
                           :action => 'edit',
                           :id => l.id
                       },
                       :class => 'icon icon-edit' %>
           <%= link_to l(:button_delete),
-                      {
-                          
+                      {                          
                           :action => 'destroy',
                           :id => l.id
                       },

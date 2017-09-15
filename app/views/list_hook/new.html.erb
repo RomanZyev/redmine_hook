@@ -1,0 +1,10 @@
+<h2><%= l(:hook_new) %></h2>
+<%= error_messages_for @hook %>
+
+<div class="box tabular">
+	<%= labelled_form_for @hook, url: {action: "create"} do |f| %>
+		 <%= render :partial => 'form', :locals => {:f => f} %>
+		 <%= submit_tag l(:button_create), {:controller => 'list_hook', :action => 'create'} -%>
+		 <%= link_to l(:button_cancel), {:controller => 'list_hook', :action => 'index'}%>
+	<% end %>
+</div>

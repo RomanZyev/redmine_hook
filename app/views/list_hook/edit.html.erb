@@ -1,0 +1,10 @@
+<h2><%= l(:text_edit) %></h2>
+<%= error_messages_for @hook %>
+
+<div class="box tabular">
+	<%= labelled_form_for @hook, url: {action: "update"} do |f| %>
+		 <%= render :partial => 'form', :locals => {:f => f} %>
+		 <%= submit_tag l(:button_save) -%>
+		 <%= link_to l(:button_cancel), {:controller => 'list_hook', :action => 'index'}%>
+	<% end %>
+</div>
