@@ -1,3 +1,10 @@
 # English strings go here for Rails i18n
 en:
-  # my_label: "My label"
+  id: id 
+  name: Name
+  txt: Text
+  text_edit: Edit
+  label_list_hook_index: list hook
+  label_list_text_new: New
+  label_text_hook_index: list text
+  label_list_hook_new: New

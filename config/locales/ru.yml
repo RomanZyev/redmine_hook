@@ -1,0 +1,10 @@
+ru:
+  id: Ид 
+  name: Имя
+  txt: Текст
+
+  text_edit: Редактирование
+  label_list_hook_index: Список hook-ов
+  label_list_text_new: Новый
+  label_text_hook_index: Список текстов
+  label_list_hook_new: Новый
